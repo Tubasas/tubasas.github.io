@@ -1,0 +1,35 @@
+
+/* Element utilities (boxes, shapes, etc.) */
+.navbar-background-color { color: var(--color-primary)}
+.navbar-border-color { border-color: var(--color-primary)}
+.navbar-text-color { color: #425760}
+
+/* Navbar specific styles */
+.navbar {
+    border-radius: 0 0 30px 30px;
+    border-color: white;
+    border-style: solid;
+    border-width: 0px 6px 6px 6px;
+    box-shadow: 6px 6px 0 #B5FFF0;
+}
+
+#navbar-logo {
+    position: absolute;
+    top: 8px;
+}
+
+.navbar-link-stack {
+    display: grid;
+    grid-template-columns: 1fr;
+    line-height: 1.15;
+}
+
+.nav-item {
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-item:hover {
+    background-color: #79F2D8;
+}
