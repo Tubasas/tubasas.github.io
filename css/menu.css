@@ -22,7 +22,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    z-index: 1030;
+    z-index: 1055;
     padding: 0;
     margin: 0;
     outline: none;
@@ -57,14 +57,27 @@ body.menu-open .hamburger-btn {
     border-left: 6px solid #FFFFFF;
     box-shadow: -6px 0 0 var(--shadow-color);
     z-index: 1050;
-    display: none;
+    display: flex;
     flex-direction: column;
     overflow-y: auto;
     overflow-x: hidden;
+    transform: translateX(100%);
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 0.42s cubic-bezier(0.22, 1, 0.36, 1), visibility 0s linear 0.42s;
 }
 
 .side-menu.is-open {
-    display: flex;
+    transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
+    transition: transform 0.42s cubic-bezier(0.22, 1, 0.36, 1), visibility 0s linear 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .side-menu {
+        transition: none;
+    }
 }
 
 /* Non-dimming backdrop for click-outside on desktop */
@@ -157,8 +170,16 @@ body.menu-open .side-menu-backdrop {
     transition: background-color 0.15s ease;
 }
 
+body:not(.menu-open) .menu-close-btn {
+    display: none;
+}
+
+body.menu-open .menu-close-btn {
+    display: flex;
+}
+
 .menu-close-btn:hover {
-    background-color: #e6756d;
+    background-color: #ff8e8a;
 }
 
 .menu-close-btn:focus-visible {
