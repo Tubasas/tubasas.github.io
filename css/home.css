@@ -1,0 +1,13 @@
+.greeting h1 {
+    line-height: 1;
+    letter-spacing: -2px;
+    color: #425760;
+    position: relative;
+    right: 128px;
+}
+
+#tubasasCarousel div div img {
+    max-height: 768px;;
+    width: auto;
+    object-fit: contain;
+}

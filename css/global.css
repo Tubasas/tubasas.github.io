@@ -52,3 +52,15 @@ body {
     color: var(--text-color);
     font-family: 'Figtree', sans-serif;
 }
+
+/* Template styled elements */
+.default-box {
+    --shadow-color: #C3D8DB;
+    --border-color: #ffffff;
+    border-style: solid;
+    border-color: var(--border-color);
+    border-width: 4px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 6px 6px 0 var(--shadow-color)
+}
