@@ -7,11 +7,15 @@
 }
 
 #tubasasCarousel div div img {
-    max-height: 768px;;
+    max-height: 640px;
     width: auto;
     object-fit: contain;
 }
 
 #tubasasCarousel .carousel-item {
     transition: none;
+}
+
+.hero-social-link {
+    text-decoration: none;
 }
