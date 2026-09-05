@@ -1,0 +1,81 @@
+/* Color assignments as per brand guide
+    Accent (Teal) = Primary
+    Accent 2 (Baby Blue) = Secondary
+*/
+
+:root {
+    --white: #FDFDFD;
+    --black: #343434;
+    --grey: #B8B8B8;
+    --background-color: var(--white);
+    --text-color: var(--black);
+    --text-color-muted: #b7c2cc;
+    --primary-color: #36EBC5;
+    --primary-color-dark: #468C7F;
+    --primary-color-light: #28E0BB;
+    --accent-color: #45DEF5;
+}
+
+/* Color assignments above as CSS classes */
+.color-white { color: var(--white); }
+.color-black { color: var(--black); }
+.color-grey { color: var(--grey); }
+.color-text { color: var(--text-color); }
+.color-text-muted { color: var(--text-color-muted); }
+.color-primary { color: var(--primary-color); }
+.color-primary-dark { color: var(--primary-color-dark); }
+.color-primary-light { color: var(--primary-color-light); }
+.color-accent { color: var(--accent-color); }
+
+/* Background color assignments above as CSS classes */
+.background-color-white { background-color: var(--white); }
+.background-color-black { background-color: var(--black); }
+.background-color-grey { background-color: var(--grey); }
+.background-color-primary { background-color: var(--primary-color); }
+.background-color-primary-dark { background-color: var(--primary-color-dark); }
+.background-color-primary-light { background-color: var(--primary-color-light); }
+.background-color-accent { background-color: var(--accent-color); }
+
+/* Font assignments */
+.font-primary { font-family: 'Figtree', sans-serif; }
+.font-gabarito { font-family: 'Gabarito', sans-serif; }
+.font-mochiy { font-family: 'Mochiy Pop One', sans-serif; }
+.font-tiltwarp { font-family: 'Tilt Warp', sans-serif; }
+.font-outfit { font-family: 'Outfit', sans-serif; }
+
+/* Formal global styles applied across all HTML documents */
+
+body {
+    background-image: url('../images/background-tile.png');
+    background-repeat: repeat;
+    background-size: 256px;
+    color: var(--text-color);
+    font-family: 'Figtree', sans-serif;
+    /* Begin fix for footer to always be at the bottom even if there's little occupation on the page */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* End footer fix */
+
+footer {
+    background-color: var(--primary-color);
+    border-radius: 30px 30px 0 0;
+}
+
+/* Template styled elements */
+.default-box {
+    --shadow-color: #C3D8DB;
+    --border-color: #ffffff;
+    border-style: solid;
+    border-color: var(--border-color);
+    border-width: 4px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 6px 6px 0 var(--shadow-color)
+}

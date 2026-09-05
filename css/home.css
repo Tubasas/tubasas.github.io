@@ -1,0 +1,33 @@
+.greeting h1 {
+    line-height: 1;
+    letter-spacing: -2px;
+    color: #425760;
+    position: relative;
+    right: 128px;
+}
+
+#tubasasCarousel div div img {
+    max-height: 780px;
+    width: auto;
+    object-fit: contain;
+}
+
+#tubasasCarousel .carousel-item {
+    transition: none;
+}
+
+.hero-social-link {
+    text-decoration: none;
+}
+
+.heading {
+    font-family: 'Figtree', sans-serif;
+    font-weight: 800;
+    color: var(--primary-color);                          
+}
+
+@media (max-width: 768px) {
+    #tubasasCarousel div div img {
+        max-height: 640px;
+    }
+}
