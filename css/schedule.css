@@ -1,0 +1,23 @@
+.time-stack time {
+    display: flex;
+    flex-direction: column;
+}
+
+.time-clock,
+.time-date,
+.time-zone {
+    display: block;
+}
+#scheduleHeading {
+    width: 380px;
+}
+
+.time-stack {
+    display: grid;
+    grid-template-columns: 1fr;
+    line-height: 1.15;
+}
+
+.local-time {
+    color: var(--accent-color);
+}
