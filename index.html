@@ -7,7 +7,7 @@
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Gabarito:wght@400..900&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Gabarito:wght@400..900&family=Mochiy+Pop+One&family=Outfit:wght@100..900&family=Tilt+Warp&display=swap" rel="stylesheet">
     <!-- EXTERNAL FRAMEWORKS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!-- CUSTOM CSS -->
@@ -79,8 +79,147 @@
     </div>
     </nav>
     
-    <!-- HAMBURGER MENU -->
-    
+    <!-- HAMBURGER MENU / SIDE MENU -->
+    <!-- <div id="sideMenuBackdrop" class="side-menu-backdrop" aria-hidden="true"></div>-->
+    <aside id="sideMenu" class="side-menu" aria-label="Site Navigation" aria-hidden="true">
+        <!-- MENU HEADER -->
+        <div class="menu-header">
+            <!-- Title header swithces from MENU to the logo on mobile -->
+            <div class="menu-title">
+                <div class="side-text font-figtree">MENU</div>
+                <div class="mobile-logo">
+                    <img id="menu-logo" src="images/navbar-logo-white.png" alt="Tubasas">
+                </div>
+            </div>
+            <div class="menu-time">
+                <div id="menuClock" class="menu-clock font-tiltwarp">00:00</div>
+                <div class="menu-timezone font-outfit">UTC+08 (PHT)</div>
+            </div>
+            <button id="closeMenuBtn" class="menu-close-btn" type="button" aria-label="Close menu">
+                <svg class="close-icon" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 4L30 30M30 4L4 30" stroke="white" stroke-width="5" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- MENU CONTENT -->
+        <div class="menu-content px-3 py-3 mt-1">
+            <!-- GRID 1: Main Links -->
+            <div class="container-fluid">
+                <div class="row g-2">
+                    <div class="col-6">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="#">
+                            <span class="font-primary fw-bold text-uppercase">Home</span>
+                            <span class="font-mochiy">ホーム</span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="#">
+                            <span class="font-primary fw-bold text-uppercase">About</span>
+                            <span class="font-mochiy">アバウト</span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="#">
+                            <span class="font-primary fw-bold text-uppercase">Videos</span>
+                            <span class="font-mochiy">ビデオ</span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="#">
+                            <span class="font-primary fw-bold text-uppercase">Contact</span>
+                            <span class="font-mochiy">お問い合わせ</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Divider -->
+            <div class="menu-divider-wrapper my-3">
+                <hr class="menu-divider">
+            </div>
+            <!-- GRID 2: Supplementary Links -->
+             <div class="container-fluid">
+                <div class="row g-2">
+                    <div class="col-6">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="#">
+                            <span class="font-primary fw-bold text-uppercase">Schedule</span>
+                            <span class="font-mochiy">配信予定</span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="#">
+                            <span class="font-primary fw-bold text-uppercase">Gallery</span>
+                            <span class="font-mochiy">写真</span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="#">
+                            <span class="font-primary fw-bold text-uppercase">Resources</span>
+                            <span class="font-mochiy">リソース</span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="#">
+                            <span class="font-primary fw-bold text-uppercase">My Setup</span>
+                            <span class="font-mochiy">私のセットアップ</span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="#">
+                            <span class="font-primary fw-bold text-uppercase">Carrd.Co</span>
+                            <span class="font-mochiy">カルド</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GRID 3: Main Socials -->
+            <div class="container-fluid mt-4">
+                <div class="row g-3">
+                    <div class="col-6">
+                        <a class="social-link social-link-youtube d-block w-100 px-1 py-2 fs-5" href="https://www.youtube.com/@Tubasas">
+                            <div class="container">
+                                <img src="images/youtube-social-icon-white.png" alt="YouTube" width="24" class="me-1">
+                                <span class="font-primary fw-bold">
+                                    YouTube
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="social-link social-link-bluesky d-block w-100 px-1 py-2 fs-5" href="https://bsky.app/profile/tubasas.bsky.social">
+                            <div class="container">
+                                <img src="images/bluesky-social-icon-white.png" alt="Bluesky" width="24" class="me-1">
+                                <span class="font-primary fw-bold">
+                                    Bluesky
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="social-link social-link-kofi d-block w-100 px-1 py-2 fs-5" href="https://ko-fi.com/tubasas">
+                            <div class="container">
+                                <img src="images/kofi-social-icon-white.png" alt="Kofi" width="24" class="me-1"><br>
+                                <span class="font-primary fw-bold">
+                                    Ko-fi
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="social-link social-link-streamlabs d-block w-100 px-1 py-2 fs-5" href="https://streamlabs.com/tubasas/tip">
+                            <div class="container">
+                                <img src="images/streamlabs-social-icon-white.png" alt="Streamlabs" width="24" class="me-1"><br>
+                                <span class="font-primary fw-bold">
+                                    Streamlabs
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
 
     <!-- MAIN CONTENT -->
     <main class="container-fluid px-3 px-lg-4 py-4">
@@ -90,5 +229,7 @@
 
     <!-- BOOTSTRAP JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- CUSTOM JS -->
+    <script src="js/menu.js"></script>
 </body>
 </html>
