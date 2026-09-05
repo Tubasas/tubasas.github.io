@@ -11,3 +11,7 @@
     width: auto;
     object-fit: contain;
 }
+
+#tubasasCarousel .carousel-item {
+    transition: none;
+}
