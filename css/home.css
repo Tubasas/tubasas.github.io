@@ -2,8 +2,13 @@
     line-height: 1;
     letter-spacing: -2px;
     color: #425760;
-    position: relative;
-    right: 128px;
+}
+
+.greeting img {
+    display: block;
+    width: min(100%, 360px);
+    height: auto;
+    margin-inline: auto;
 }
 
 #tubasasCarousel div div img {
@@ -28,6 +33,6 @@
 
 @media (max-width: 768px) {
     #tubasasCarousel div div img {
-        max-height: 640px;
+        max-height: 480px;
     }
 }
