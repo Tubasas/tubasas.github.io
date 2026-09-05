@@ -51,7 +51,17 @@ body {
     background-size: 256px;
     color: var(--text-color);
     font-family: 'Figtree', sans-serif;
+    /* Begin fix for footer to always be at the bottom even if there's little occupation on the page */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
+main {
+    flex: 1;
+}
+
+/* End footer fix */
 
 footer {
     background-color: var(--primary-color);
