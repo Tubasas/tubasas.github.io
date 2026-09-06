@@ -31,6 +31,7 @@
     color: var(--primary-color);                          
 }
 
+
 .about-container {
     max-width: 1024px;
 }
@@ -38,9 +39,9 @@
 #aboutModel {
     background-color: #B5FFF0;
     border-radius: 8px;
-    object-fit: contain;
-    max-height: 512px;
-    max-width: fit-content;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .about-box {
@@ -54,15 +55,17 @@
 }
 
 @media (max-width: 768px) {
-    #aboutModel {
-        height: auto !important;
-    }
-
     #tubasasCarousel div div img {
         max-height: 512px;
     }
 }
 
+@media (max-width: 575px) {
+    #aboutModel {
+        height: auto !important;
+        max-width: 256px;
+    }
+}
 
 @media (max-width: 540px) {
     #tubasasCarousel div div img {
