@@ -31,7 +31,33 @@
     color: var(--primary-color);                          
 }
 
+.about-container {
+    max-width: 1024px;
+}
+
+#aboutModel {
+    background-color: #B5FFF0;
+    border-radius: 8px;
+    object-fit: contain;
+    max-height: 512px;
+    max-width: fit-content;
+}
+
+.about-box {
+    --shadow-color: #C3D8DB;
+    --border-color: #98B7C2;
+}
+
+.about-row {
+    background-color: #F0F0F0;
+    border-radius: 8px;
+}
+
 @media (max-width: 768px) {
+    #aboutModel {
+        height: auto !important;
+    }
+
     #tubasasCarousel div div img {
         max-height: 512px;
     }
