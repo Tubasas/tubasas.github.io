@@ -33,6 +33,13 @@
 
 @media (max-width: 768px) {
     #tubasasCarousel div div img {
+        max-height: 512px;
+    }
+}
+
+
+@media (max-width: 540px) {
+    #tubasasCarousel div div img {
         max-height: 480px;
     }
 }
