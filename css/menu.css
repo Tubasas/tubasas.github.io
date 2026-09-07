@@ -285,7 +285,7 @@ body.menu-open .menu-close-btn {
 }
 
 .social-link div span {
-    letter-spacing: -0.5px;
+    letter-spacing: -0.65px;
 }
 /* Ensure navbar container on widescreen leaves space for sticky hamburger */
 @media (min-width: 992px) {
