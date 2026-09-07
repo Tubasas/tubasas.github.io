@@ -54,7 +54,7 @@
     border-radius: 8px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     #tubasasCarousel div div img {
         max-height: 512px;
     }
