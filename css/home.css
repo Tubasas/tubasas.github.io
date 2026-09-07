@@ -49,6 +49,23 @@
     --border-color: #98B7C2;
 }
 
+.video-img {
+    border-radius: 8px;
+    box-shadow: 0px 0px 0 #C3D8DB;
+    transition: 0.3s;
+}
+
+.video-img:hover {
+    transform: scale(1.03);
+    box-shadow: 4px 4px 0 #C3D8DB;
+}
+
+.video-box {
+    --background-color: #49E3B2;
+    --shadow-color: #C3D8DB;
+    --border-color: white;
+}
+
 .about-row {
     background-color: #F0F0F0;
     border-radius: 8px;
