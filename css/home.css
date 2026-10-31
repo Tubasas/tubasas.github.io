@@ -72,12 +72,17 @@
 }
 
 #contactSection {
-    background-color: #0bba94;
+    background-color: #B5FFF0;
     border-radius: 30px 30px 0 0;
     position: relative;
     top: 28px;
     z-index: -1;
-}   
+}
+
+.contact-box {
+    --shadow-color: #36EBC575;
+    --border-color: var(--primary-color);
+}
 
 @media (max-width: 767px) {
     #tubasasCarousel div div img {

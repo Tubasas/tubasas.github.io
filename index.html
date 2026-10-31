@@ -27,7 +27,7 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg background-color-primary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             <img id="navbar-logo" src="images/navbar-logo.png" alt="Tubasas" width="180">
             <canvas id="navbar-canvas" width="180" height="45"></canvas>
         </a>
@@ -42,6 +42,14 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="about.html">
+                    <div class="navbar-link-stack text-center text-white fs-5">
+                        <span class="font-primary fw-bold text-uppercase">About</span>
+                        <span class="font-mochiy">アバウト</span>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="schedule.html">
                     <div class="navbar-link-stack text-center text-white fs-5">
                         <span class="font-primary fw-bold text-uppercase">Schedule</span>
@@ -50,7 +58,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">
+                <a class="nav-link" href="gallery.html">
                     <div class="navbar-link-stack text-center text-white fs-5">
                         <span class="font-primary fw-bold text-uppercase">Gallery</span>
                         <span class="font-mochiy">写真</span>
@@ -58,15 +66,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">
-                    <div class="navbar-link-stack text-center text-white fs-5">
-                        <span class="font-primary fw-bold text-uppercase">My Setup</span>
-                        <span class="font-mochiy">私のセットアップ</span>
-                    </div>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#contact">
+                <a class="nav-link" href="/#contact">
                     <div class="navbar-link-stack text-center text-white fs-5">
                         <span class="font-primary fw-bold text-uppercase">Contact</span>
                         <span class="font-mochiy">お問い合わせ</span>
@@ -116,25 +116,25 @@
             <div class="container-fluid">
                 <div class="row g-2">
                     <div class="col-6">
-                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="#">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" aria-current="page" href="#">
                             <span class="font-primary fw-bold text-uppercase">Home</span>
                             <span class="font-mochiy">ホーム</span>
                         </a>
                     </div>
                     <div class="col-6">
-                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="#about">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="/#about">
                             <span class="font-primary fw-bold text-uppercase">About</span>
                             <span class="font-mochiy">アバウト</span>
                         </a>
                     </div>
                     <div class="col-6">
-                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="#videos">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="/#videos">
                             <span class="font-primary fw-bold text-uppercase">Videos</span>
                             <span class="font-mochiy">ビデオ</span>
                         </a>
                     </div>
                     <div class="col-6">
-                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="#contact">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="/#contact">
                             <span class="font-primary fw-bold text-uppercase">Contact</span>
                             <span class="font-mochiy">お問い合わせ</span>
                         </a>
@@ -155,7 +155,7 @@
                         </a>
                     </div>
                     <div class="col-6">
-                        <a class="sidebar-link-stack sidebar-link p-2 fs-5 disabled" aria-disabled="true">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="gallery.html">
                             <span class="font-primary fw-bold text-uppercase">Gallery</span>
                             <span class="font-mochiy">写真</span>
                         </a>
@@ -164,12 +164,6 @@
                         <a class="sidebar-link-stack sidebar-link p-2 fs-5 disabled" aria-disabled="true">
                             <span class="font-primary fw-bold text-uppercase">Resources</span>
                             <span class="font-mochiy">リソース</span>
-                        </a>
-                    </div>
-                    <div class="col-6">
-                        <a class="sidebar-link-stack sidebar-link p-2 fs-5 disabled" aria-disabled="true">
-                            <span class="font-primary fw-bold text-uppercase">My Setup</span>
-                            <span class="font-mochiy">私のセットアップ</span>
                         </a>
                     </div>
                     <div class="col-6">
@@ -245,9 +239,8 @@
                         <br>
                         <div class="default-box">
                             <div class="container p-2 p-lg-3">
-                                <p class="fw-bold">Started activities since July 22, 2026!</p>
+                                <p><span class="fw-bold">Started activities since July 22, 2026!</span>&nbsp;&nbsp;※ EN/TAG/CEB OK!</p>
                                 <p>Hai, hai, this is your resident tech VTuber! Primarily doing tech, educational, and computer science related videos that everyone can enjoy and even learn from!</p>
-                                <p>※ EN/TAG/CEB OK!</p>
                                 <div class="container px-0 px-md-2 px-lg-4 text-center">
                                     <video width="100%" src="movies/pr-video.mp4" autoplay="" loop="" muted="" playsinline="" type="video/mp4" style="border-radius: 8px;"></video>
                                 </div>
@@ -421,7 +414,7 @@
                     </ul>
                     <h2>Branding (Assets, Models, etc.)</h2>
                     <ul>
-                        <li>Draw another version of my profile pictures used across my socials</li>
+                        <li><s>Draw another version of my profile pictures used across my socials</s> (10/31/2026)</li>
                         <li>Make an art of and rig my own Live2D model</li>
                         <li>Make a new version of my VRoid model (own made clothing, accessories, etc.)</li>
                     </ul>
@@ -436,7 +429,8 @@
                 <h1 id="changelog" class="heading display-1">Changelog</h1>
                 <div class="container-fluid default-box p-3">
                     <ul>
-                        <li>9/7/2026: Added videos, goals, and changelog sections to landing page</li>
+                        <li>10/31/2026: Added Gallery and About pages (merged About and My Setup into one page), revamped contact section to home page</li>
+                        <li>9/7/2026: Added videos, goals, and changelog sections to home page</li>
                         <li>9/6/2026: New favicon, added about section to home page</li>
                         <li>9/5/2026: Initial commit with home header, contact section, fun hamburger menu at the top right, and dedicated schedule page</li>
                     </ul>
@@ -449,10 +443,10 @@
     <!-- CONTACT SECTION -->
     <section id="contactSection" class="container-fluid">
         <div class="container pt-4">
-            <h1 id="contact" class="heading display-1" style="color: white">Contact</h1>
-            <div class="container-fluid default-box p-3">
+            <h1 id="contact" class="heading display-1" style="color: var(--primary-color-light)">Contact</h1>
+            <div class="container-fluid default-box contact-box p-3">
                 <p class="fs-3">
-                    For business inquiries, collaborations, or you'd simply like to exchange hello's, feel free to reach out at: <a href="mailto:tubasas.work@gmail.com">tubasas.work@gmail.com</a>
+                    For inquiries, collaborations, or you just like to say hello, feel free to reach out at: <a href="mailto:tubasas.work@gmail.com">tubasas.work@gmail.com</a>
                 </p>
             </div>
         </div>
