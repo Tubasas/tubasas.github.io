@@ -49,7 +49,6 @@ main {
 }
 
 .spec-box {
-    --background-color: var(--accent-color);
     --shadow-color: #C3D8DB;
     --border-color: #98B7C2;
 }
