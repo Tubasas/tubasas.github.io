@@ -2,6 +2,17 @@
     max-height: 120px;
 }
 
+#gallerySource {
+    --shadow-color: #C3D8DB;
+    --border-color: white;
+    --background-color: var(--accent-color);
+    line-height: 1.15;
+}
+
+#gallerySource span a {
+    color: inherit;
+}
+
 .photo-gallery {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));

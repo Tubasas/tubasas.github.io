@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="KhSfjtO_SvuZ1hvNtPJ66T-yvJ_QQFhrDtO1UyNuAXo" />
+    <title>Tubasas's Gallery</title>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Gabarito:wght@400..900&family=Mochiy+Pop+One&family=Outfit:wght@100..900&family=Tilt+Warp&display=swap" rel="stylesheet">
+    <!-- EXTERNAL FRAMEWORKS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/photoswipe.css" rel="stylesheet">
+    <!-- CUSTOM CSS -->
+    <link href="css/global.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/menu.css" rel="stylesheet">
+    <link href="css/gallery.css" rel="stylesheet">
+    <!-- FAVICON AND PWA MANIFESTS-->
+    <link rel="icon" type="image/png" href="favicon/favicon-new-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon-new.svg" />
+    <link rel="shortcut icon" href="favicon/favicon-new.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg background-color-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+            <img id="navbar-logo" src="images/navbar-logo.png" alt="Tubasas" width="180">
+            <canvas id="navbar-canvas" width="180" height="45"></canvas>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2">
+            <li class="nav-item">
+                <a class="nav-link active" href="/">
+                    <div class="navbar-link-stack text-center text-white fs-5">
+                        <span class="font-primary fw-bold text-uppercase">Home</span>
+                        <span class="font-mochiy">ホーム</span>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">
+                    <div class="navbar-link-stack text-center text-white fs-5">
+                        <span class="font-primary fw-bold text-uppercase">About</span>
+                        <span class="font-mochiy">アバウト</span>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="schedule.html">
+                    <div class="navbar-link-stack text-center text-white fs-5">
+                        <span class="font-primary fw-bold text-uppercase">Schedule</span>
+                        <span class="font-mochiy">スケジュール</span>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <div class="navbar-link-stack text-center text-white fs-5">
+                        <span class="font-primary fw-bold text-uppercase">Gallery</span>
+                        <span class="font-mochiy">写真</span>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/#contact">
+                    <div class="navbar-link-stack text-center text-white fs-5">
+                        <span class="font-primary fw-bold text-uppercase">Contact</span>
+                        <span class="font-mochiy">お問い合わせ</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        </div>
+
+        <!-- STICKY HAMBURGER BUTTON -->
+        <button id="closeMenuBtn" class="menu-close-btn" type="button" aria-label="Close menu">
+            <svg class="close-icon" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4L30 30M30 4L4 30" stroke="white" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+        </button>
+        <button id="hamburgerBtn" class="hamburger-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sideMenu">
+            <svg class="hamburger-icon" width="44" height="28" viewBox="0 0 44 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect y="0" width="44" height="5" rx="2.5" fill="white"/>
+                <rect y="11.5" width="44" height="5" rx="2.5" fill="white"/>
+                <rect y="23" width="44" height="5" rx="2.5" fill="white"/>
+            </svg>
+        </button>
+    </div>
+    </nav>
+    
+    <!-- HAMBURGER MENU / SIDE MENU -->
+    <!-- <div id="sideMenuBackdrop" class="side-menu-backdrop" aria-hidden="true"></div>-->
+    <aside id="sideMenu" class="side-menu" aria-label="Site Navigation" aria-hidden="true">
+        <!-- MENU HEADER -->
+        <div class="menu-header">
+            <!-- Title header swithces from MENU to the logo on mobile -->
+            <div class="menu-title">
+                <div class="side-text font-figtree">MENU</div>
+                <div class="mobile-logo">
+                    <img id="menu-logo" src="images/navbar-logo-white.png" alt="Tubasas">
+                </div>
+            </div>
+            <div class="menu-time">
+                <div id="menuClock" class="menu-clock font-tiltwarp">00:00</div>
+                <div class="menu-timezone font-outfit">UTC+08 (PHT)</div>
+            </div>
+        </div>
+
+        <!-- MENU CONTENT -->
+        <div class="menu-content px-3 py-3 mt-1">
+            <!-- GRID 1: Main Links -->
+            <div class="container-fluid">
+                <div class="row g-2">
+                    <div class="col-6">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="/">
+                            <span class="font-primary fw-bold text-uppercase">Home</span>
+                            <span class="font-mochiy">ホーム</span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="about.html">
+                            <span class="font-primary fw-bold text-uppercase">About</span>
+                            <span class="font-mochiy">アバウト</span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="#videos">
+                            <span class="font-primary fw-bold text-uppercase">Videos</span>
+                            <span class="font-mochiy">ビデオ</span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="#contact">
+                            <span class="font-primary fw-bold text-uppercase">Contact</span>
+                            <span class="font-mochiy">お問い合わせ</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Divider -->
+            <div class="menu-divider-wrapper my-3">
+                <hr class="menu-divider">
+            </div>
+            <!-- GRID 2: Supplementary Links -->
+             <div class="container-fluid">
+                <div class="row g-2">
+                    <div class="col-6">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="schedule.html">
+                            <span class="font-primary fw-bold text-uppercase">Schedule</span>
+                            <span class="font-mochiy">スケジュール</span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" aria-current="page" href="#">
+                            <span class="font-primary fw-bold text-uppercase">Gallery</span>
+                            <span class="font-mochiy">写真</span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5 disabled" aria-disabled="true">
+                            <span class="font-primary fw-bold text-uppercase">Resources</span>
+                            <span class="font-mochiy">リソース</span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="https://tubasas.carrd.co/">
+                            <span class="font-primary fw-bold text-uppercase">Carrd.Co</span>
+                            <span class="font-mochiy">カルド</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GRID 3: Main Socials -->
+            <div class="container-fluid mt-4">
+                <div class="row g-3">
+                    <div class="col-6">
+                        <a class="social-link social-link-youtube d-block w-100 px-1 py-2 fs-5" href="https://www.youtube.com/@Tubasas">
+                            <div class="container">
+                                <img src="images/youtube-social-icon-white.png" alt="YouTube" width="24" class="me-1">
+                                <span class="font-primary fw-bold">
+                                    YouTube
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="social-link social-link-bluesky d-block w-100 px-1 py-2 fs-5" href="https://bsky.app/profile/tubasas.bsky.social">
+                            <div class="container">
+                                <img src="images/bluesky-social-icon-white.png" alt="Bluesky" width="24" class="me-1">
+                                <span class="font-primary fw-bold">
+                                    Bluesky
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="social-link social-link-kofi d-block w-100 px-1 py-2 fs-5" href="https://ko-fi.com/tubasas">
+                            <div class="container">
+                                <img src="images/kofi-social-icon-white.png" alt="Kofi" width="24" class="me-1"><br>
+                                <span class="font-primary fw-bold">
+                                    Ko-fi
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="social-link social-link-streamlabs d-block w-100 px-1 py-2 fs-5" href="https://streamlabs.com/tubasas/tip">
+                            <div class="container">
+                                <img src="images/streamlabs-social-icon-white.png" alt="Streamlabs" width="24" class="me-1"><br>
+                                <span class="font-primary fw-bold">
+                                    Streamlabs
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <header class="container-fluid pt-4">
+        <div class="container-fluid">
+            <img id="galleryHeading" src="images/gallery/title.png" alt="Gallery" class="ps-1 img-fluid">
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container-fluid pt-4">
+        <section>
+            <div class="container">
+                <h1 class="font-tiltwarp display-4 color-accent">Hero Artwork</h1>
+                <div id="hero-gallery" class="photo-gallery pswp-gallery" aria-label="Hero image gallery">
+                    <a class="photo-gallery-item" href="https://file.garden/aucs_H5OXKY6Vgs0/TsubasaNeoWeb.webp" data-pswp-width="1103" data-pswp-height="1378" target="_blank" rel="noreferrer">
+                        <img src="https://file.garden/aucs_H5OXKY6Vgs0/TsubasaNeoWeb.webp" width="1103" height="1378" alt="Tubasas wordmark" loading="lazy" decoding="async">
+                    </a>
+                    <a class="photo-gallery-item" href="https://file.garden/aucs_H5OXKY6Vgs0/Tsuki2024.webp" data-pswp-width="1024" data-pswp-height="1297" target="_blank" rel="noreferrer">
+                        <img src="https://file.garden/aucs_H5OXKY6Vgs0/Tsuki2024.webp" width="1024" height="1297" alt="Tubasas wordmark" loading="lazy" decoding="async">
+                    </a>
+                    <a class="photo-gallery-item" href="https://file.garden/aucs_H5OXKY6Vgs0/Tsuki2023.webp" data-pswp-width="1024" data-pswp-height="1024" target="_blank" rel="noreferrer">
+                        <img src="https://file.garden/aucs_H5OXKY6Vgs0/Tsuki2023.webp" width="1024" height="1024" alt="Tubasas wordmark" loading="lazy" decoding="async">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <br>
+    </main>
+    <div class="container pb-4">
+        <div class="d-flex justify-content-end">
+            <div class="default-box text-white px-2 py-1 font-primary fw-semibold" id="gallerySource">
+                <span>Gallery and Lightbox by <a href="https://photoswipe.com/">PhotoSwipe</a>. Image hosting by <a href="https://filegarden.com/">FileGarden</a>.</span>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container-fluid py-4">
+            <div class="row px-2">
+                <div class="col">
+                    <span class="font-figtree color-white fw-bold fs-5">
+                        © 2026 Tubasas
+                    </span>
+                </div>
+                <div class="col d-flex justify-content-end">
+                    <div class="d-flex justify-content-center gap-4">
+                        <a href="https://www.youtube.com/@Tubasas"
+                        class="hero-social-link d-inline-flex align-items-center">
+                            <img src="images/youtube-social-icon-white.png"
+                                alt="YouTube"
+                                width="32">
+                        </a>
+
+                        <a href="https://bsky.app/profile/tubasas.bsky.social"
+                        class="hero-social-link d-inline-flex align-items-center">
+                            <img src="images/bluesky-social-icon-white.png"
+                                alt="Bluesky"
+                                width="32">
+                        </a>
+                        <a href="https://ko-fi.com/tubasas"
+                        class="hero-social-link d-inline-flex align-items-center">
+                            <img src="images/kofi-social-icon-white.png"
+                                alt="Ko-fi"
+                                width="32">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- CUSTOM JS -->
+    <script src="js/menu.js"></script>
+    <script type="module" src="js/gallery.js"></script>
+</body>
+</html>
