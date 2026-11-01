@@ -9,7 +9,8 @@
     display: block;
 }
 #scheduleHeading {
-    width: 380px;
+    /* width: 380px; */
+    max-height: 96px;
 }
 
 .time-stack {
