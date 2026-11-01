@@ -122,19 +122,19 @@
                         </a>
                     </div>
                     <div class="col-6">
-                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="/#about">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="about.html">
                             <span class="font-primary fw-bold text-uppercase">About</span>
                             <span class="font-mochiy">アバウト</span>
                         </a>
                     </div>
                     <div class="col-6">
-                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="/#videos">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="#videos">
                             <span class="font-primary fw-bold text-uppercase">Videos</span>
                             <span class="font-mochiy">ビデオ</span>
                         </a>
                     </div>
                     <div class="col-6">
-                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="/#contact">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="#contact">
                             <span class="font-primary fw-bold text-uppercase">Contact</span>
                             <span class="font-mochiy">お問い合わせ</span>
                         </a>
@@ -228,7 +228,7 @@
         <!-- HERO/GREETING HEADER -->
         <header>
             <div class="container">
-                <div class="row row-cols-1 row-cols-md-2 align-items-center">
+                <div class="row row-cols-1 row-cols-md-2 ">
                     <div class="col order-2 order-md-1">
                         <div class="container">
                             <div class="greeting mt-3 text-center">
@@ -239,8 +239,9 @@
                         <br>
                         <div class="default-box">
                             <div class="container p-2 p-lg-3">
-                                <p><span class="fw-bold">Started activities since July 22, 2026!</span>&nbsp;&nbsp;※ EN/TAG/CEB OK!</p>
+                                <p class="fw-bold">Started activities since July 22, 2026!</p>
                                 <p>Hai, hai, this is your resident tech VTuber! Primarily doing tech, educational, and computer science related videos that everyone can enjoy and even learn from!</p>
+                                <p>※ EN/TAG/CEB OK!</p>
                                 <div class="container px-0 px-md-2 px-lg-4 text-center">
                                     <video width="100%" src="movies/pr-video.mp4" autoplay="" loop="" muted="" playsinline="" type="video/mp4" style="border-radius: 8px;"></video>
                                 </div>
@@ -316,7 +317,20 @@
         <!-- ABOUT SECTION -->
         <section>
             <div class="container d-flex flex-column align-items-center">
-                <h1 id="about" class="heading display-1 container-fluid">About</h1>
+                <div class="row d-flex justify-content-between align-items-center w-100 mb-2 mb-lg-0">
+                    <div class="col-1">
+                        <h1 id="about" class="heading display-1 container-fluid">About</h1>
+                    </div>
+                    <div class="col-auto mb-2 text-end">
+                        <a class="default-button d-inline-flex align-items-end py-1 fs-2" href="about">
+                            <div class="container">
+                                <span class="font-primary fw-semibold">
+                                    More &#10132;
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
                 <div class="about-container">
                     <div class="default-box about-box p-3">
                         <div class="row row-cols-1 row-cols-sm-2">
@@ -361,7 +375,22 @@
         <!-- VIDEOS SECTION -->
         <section>
             <div class="container">
-                <h1 id="videos" class="heading display-1">Videos</h1>
+                <div class="row d-flex justify-content-between align-items-center w-100 mb-2 mb-lg-0">
+                    <div class="col-auto">
+                        <h1 id="videos" class="heading display-1 container-fluid">Videos</h1>
+                    </div>
+                    <div class="col-auto mb-2 text-end">
+                        <!--
+                        <a class="default-button d-inline-flex align-items-end px-1 py-1 fs-2" href="#">
+                            <div class="container">
+                                <span class="font-primary fw-semibold">
+                                    &#10132;
+                                </span>
+                            </div>
+                        </a>
+                         -->
+                    </div>
+                </div>
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
                     <a href="https://www.youtube.com/watch?v=5IzUaT87vR0" style="text-decoration: none;">
                         <div class="container-fluid">
