@@ -1,0 +1,74 @@
+main {
+    position: relative;
+    overflow: hidden;
+}
+
+.greeting {
+    opacity: 100%;
+}
+
+#aboutHero {
+    position: absolute;
+    right: -40px;
+    top: 0;
+    max-width: 512px;
+    z-index: -1;
+}
+
+#introductionSection {
+    --shadow-color: #B5FFF0;
+    --border-color: #ffffff;
+    --background-color: var(--primary-color);
+    --section-clip: polygon(1px calc(100vw / 15), 100% 0, 100% 100%, 0 100%);
+    position: relative;
+    background-color: var(--border-color);
+    filter: drop-shadow(6px 6px 0 var(--shadow-color));
+    clip-path: var(--section-clip);
+    -webkit-clip-path: var(--section-clip);
+}
+
+.sectionShadow {
+    --shadow-color: #B5FFF0;
+    box-shadow: 8px 8px 0 var(--shadow-color);
+    border-radius: 12px;
+}
+
+#introductionSection::before {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    background-color: var(--background-color);
+    clip-path: inherit;
+    -webkit-clip-path: inherit;
+    z-index: 0;
+}
+
+#introductionSection > .container {
+    position: relative;
+    z-index: 1;
+}
+
+.spec-box {
+    --shadow-color: #C3D8DB;
+    --border-color: #98B7C2;
+}
+
+
+@media (max-width: 1023px)  {
+    #aboutHero {
+      max-width: 400px;
+      }
+}
+
+@media (max-width: 767px)  {
+    .greeting {
+        opacity: 0;
+    }
+
+    #aboutHero {
+        max-width: 360px;
+        top: 0px;
+    }
+
+
+}

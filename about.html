@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="KhSfjtO_SvuZ1hvNtPJ66T-yvJ_QQFhrDtO1UyNuAXo" />
+    <title>About Tubasas</title>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Gabarito:wght@400..900&family=Mochiy+Pop+One&family=Outfit:wght@100..900&family=Tilt+Warp&display=swap" rel="stylesheet">
+    <!-- EXTERNAL FRAMEWORKS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- CUSTOM CSS -->
+    <link href="css/global.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/menu.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
+    <link href="css/about.css" rel="stylesheet">
+    <!-- FAVICON AND PWA MANIFESTS-->
+    <link rel="icon" type="image/png" href="favicon/favicon-new-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon-new.svg" />
+    <link rel="shortcut icon" href="favicon/favicon-new.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg background-color-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+            <img id="navbar-logo" src="images/navbar-logo.png" alt="Tubasas" width="180">
+            <canvas id="navbar-canvas" width="180" height="45"></canvas>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2">
+            <li class="nav-item">
+                <a class="nav-link active" href="/">
+                    <div class="navbar-link-stack text-center text-white fs-5">
+                        <span class="font-primary fw-bold text-uppercase">Home</span>
+                        <span class="font-mochiy">ホーム</span>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <div class="navbar-link-stack text-center text-white fs-5">
+                        <span class="font-primary fw-bold text-uppercase">About</span>
+                        <span class="font-mochiy">アバウト</span>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="schedule.html">
+                    <div class="navbar-link-stack text-center text-white fs-5">
+                        <span class="font-primary fw-bold text-uppercase">Schedule</span>
+                        <span class="font-mochiy">スケジュール</span>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="gallery.html">
+                    <div class="navbar-link-stack text-center text-white fs-5">
+                        <span class="font-primary fw-bold text-uppercase">Gallery</span>
+                        <span class="font-mochiy">写真</span>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/#contact">
+                    <div class="navbar-link-stack text-center text-white fs-5">
+                        <span class="font-primary fw-bold text-uppercase">Contact</span>
+                        <span class="font-mochiy">お問い合わせ</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        </div>
+
+        <!-- STICKY HAMBURGER BUTTON -->
+        <button id="closeMenuBtn" class="menu-close-btn" type="button" aria-label="Close menu">
+            <svg class="close-icon" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4L30 30M30 4L4 30" stroke="white" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+        </button>
+        <button id="hamburgerBtn" class="hamburger-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sideMenu">
+            <svg class="hamburger-icon" width="44" height="28" viewBox="0 0 44 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect y="0" width="44" height="5" rx="2.5" fill="white"/>
+                <rect y="11.5" width="44" height="5" rx="2.5" fill="white"/>
+                <rect y="23" width="44" height="5" rx="2.5" fill="white"/>
+            </svg>
+        </button>
+    </div>
+    </nav>
+    
+    <!-- HAMBURGER MENU / SIDE MENU -->
+    <!-- <div id="sideMenuBackdrop" class="side-menu-backdrop" aria-hidden="true"></div>-->
+    <aside id="sideMenu" class="side-menu" aria-label="Site Navigation" aria-hidden="true">
+        <!-- MENU HEADER -->
+        <div class="menu-header">
+            <!-- Title header swithces from MENU to the logo on mobile -->
+            <div class="menu-title">
+                <div class="side-text font-figtree">MENU</div>
+                <div class="mobile-logo">
+                    <img id="menu-logo" src="images/navbar-logo-white.png" alt="Tubasas">
+                </div>
+            </div>
+            <div class="menu-time">
+                <div id="menuClock" class="menu-clock font-tiltwarp">00:00</div>
+                <div class="menu-timezone font-outfit">UTC+08 (PHT)</div>
+            </div>
+        </div>
+
+        <!-- MENU CONTENT -->
+        <div class="menu-content px-3 py-3 mt-1">
+            <!-- GRID 1: Main Links -->
+            <div class="container-fluid">
+                <div class="row g-2">
+                    <div class="col-6">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="/">
+                            <span class="font-primary fw-bold text-uppercase">Home</span>
+                            <span class="font-mochiy">ホーム</span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" aria-current="page" href="#">
+                            <span class="font-primary fw-bold text-uppercase">About</span>
+                            <span class="font-mochiy">アバウト</span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="#videos">
+                            <span class="font-primary fw-bold text-uppercase">Videos</span>
+                            <span class="font-mochiy">ビデオ</span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="#contact">
+                            <span class="font-primary fw-bold text-uppercase">Contact</span>
+                            <span class="font-mochiy">お問い合わせ</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Divider -->
+            <div class="menu-divider-wrapper my-3">
+                <hr class="menu-divider">
+            </div>
+            <!-- GRID 2: Supplementary Links -->
+             <div class="container-fluid">
+                <div class="row g-2">
+                    <div class="col-6">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="schedule.html">
+                            <span class="font-primary fw-bold text-uppercase">Schedule</span>
+                            <span class="font-mochiy">スケジュール</span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="gallery.html">
+                            <span class="font-primary fw-bold text-uppercase">Gallery</span>
+                            <span class="font-mochiy">写真</span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5 disabled" aria-disabled="true">
+                            <span class="font-primary fw-bold text-uppercase">Resources</span>
+                            <span class="font-mochiy">リソース</span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="https://tubasas.carrd.co/">
+                            <span class="font-primary fw-bold text-uppercase">Carrd.Co</span>
+                            <span class="font-mochiy">カルド</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GRID 3: Main Socials -->
+            <div class="container-fluid mt-4">
+                <div class="row g-3">
+                    <div class="col-6">
+                        <a class="social-link social-link-youtube d-block w-100 px-1 py-2 fs-5" href="https://www.youtube.com/@Tubasas">
+                            <div class="container">
+                                <img src="images/youtube-social-icon-white.png" alt="YouTube" width="24" class="me-1">
+                                <span class="font-primary fw-bold">
+                                    YouTube
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="social-link social-link-bluesky d-block w-100 px-1 py-2 fs-5" href="https://bsky.app/profile/tubasas.bsky.social">
+                            <div class="container">
+                                <img src="images/bluesky-social-icon-white.png" alt="Bluesky" width="24" class="me-1">
+                                <span class="font-primary fw-bold">
+                                    Bluesky
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="social-link social-link-kofi d-block w-100 px-1 py-2 fs-5" href="https://ko-fi.com/tubasas">
+                            <div class="container">
+                                <img src="images/kofi-social-icon-white.png" alt="Kofi" width="24" class="me-1"><br>
+                                <span class="font-primary fw-bold">
+                                    Ko-fi
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a class="social-link social-link-streamlabs d-block w-100 px-1 py-2 fs-5" href="https://streamlabs.com/tubasas/tip">
+                            <div class="container">
+                                <img src="images/streamlabs-social-icon-white.png" alt="Streamlabs" width="24" class="me-1"><br>
+                                <span class="font-primary fw-bold">
+                                    Streamlabs
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="pt-4">
+        <!-- HERO/GREETING HEADER -->
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-7 py-4 d-flex flex-column align-items-center">
+                        <div class="container">
+                            <div class="greeting mt-3 text-center py-5">
+                                <h1 class="font-mochiy"><span class="display-1">Hai, hai,</span><br>
+                                    <span class="display-3 font-tiltwarp"><span class="color-primary">Tubasas</span> desu!</span></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <img src="images/about/tubasas-hero-greeting-rotated.webp" id="aboutHero">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <br>
+
+        <!-- INTRODUCTION HEADER -->
+        <div class="sectionShadow">
+            <section id="introductionSection">
+                <div class="container text-white px-4 px-md-5 pt-5 pb-3 pb-md-3">
+                    <div class="greetingMobile text-center d-block d-md-none">
+                        <h1 class="display-1 font-mochiy"><span class="display-1">Hai, hai,</span><br>
+                            <span class="display-1 font-tiltwarp">Tubasas desu!</span></h1>
+                    </div>
+                    <h2 class="font-tiltwarp text-center pt-0 pt-md-4 pt-lg-5">VTuber / Content Creator / Digital Artist</h2>
+                    <div class="fw-semibold px-0 px-lg-5 pt-3" style="font-size: 1.1rem">
+                        <div class="px-lg-5">                            
+                            <p>I’m Tubasas, your resident tech VTuber from the Philippines! I mainly specialize in IT Support and enthusiastic in the rabbit hole of computer science. I primarily make videos and stream about this field especially teaching about it! I also aim to play and stream games in all sorts of wacky ways, even about computer science!</p>
+                            <p>Aside from my nerdiness, I am also a graphic designer, writer, and an amateur UI designer! I work hard in having everything homemade from this website, my branding and graphics, to my future Live2D model soon.</p>
+                            <p>I am fluent in English, Tagalog, and Cebuano (Bisaya).</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <br>
+
+        <!-- DATA SECTION -->
+        <section class="container">
+            <h1 id="data" class="heading display-1">Bio</h1>
+            <div class="container d-flex flex-column align-items-center">
+                <div class="about-container">
+                    <div class="default-box about-box p-3">
+                        <div class="row row-cols-1 row-cols-md-2">
+                            <div class="col pb-2 pd-md-0 d-flex flex-column align-items-center">
+                                <img src="images/home/aboutModel1x1Cmp.webp" id="aboutModel" class="img-fluid w-100 d-none d-sm-block"alt="Tubasas">
+                                <img src="images/home/aboutModelsmCmp.webp" id="aboutModel" class="img-fluid w-100 d-block d-sm-none"alt="Tubasas">
+                            </div>
+                            <div class="col">
+                                <div class="container d-flex flex-column gap-2 fs-5">
+                                    <div class="row about-row py-2 py-lg-3 d-flex flex-row align-items-center">
+                                        <div class="col-12 col-lg-4 text-uppercase fw-bold">Name</div>
+                                        <div class="col">Tubasas, 翼, ツバサス </div>
+                                    </div>
+                                    <div class="row about-row py-2 py-lg-3 d-flex flex-row align-items-center">
+                                        <div class="col-12 col-lg-4 text-uppercase fw-bold">Age</div>
+                                        <div class="col">65535</div>
+                                    </div>
+                                    <div class="row about-row py-2 py-lg-3 d-flex flex-row align-items-center">
+                                        <div class="col-12 col-lg-4 text-uppercase fw-bold">Favorite Color</div>
+                                        <div class="col">Teal, Aquamarine</div>
+                                    </div>
+                                    <div class="row about-row py-2 py-lg-3 d-flex flex-row align-items-center">
+                                        <div class="col-12 col-lg-4 text-uppercase fw-bold">Occupation</div>
+                                        <div class="col">Resident IT Support</div>
+                                    </div>
+                                    <div class="row about-row py-2 py-lg-3 d-flex flex-row align-items-center">
+                                        <div class="col-12 col-lg-4 text-uppercase fw-bold">Likes</div>
+                                        <div class="col">Computers, tinkering stuff, non-stop creativity</div>
+                                    </div>
+                                    <div class="row about-row py-2 py-lg-3 d-flex flex-row align-items-center">
+                                        <div class="col-12 col-lg-4 text-uppercase fw-bold">Dislikes</div>
+                                        <div class="col">Errors that make no sense it makes you flip</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+
+        <!-- MY SETUP SECTION -->
+        <section class="container">
+            <h1 id="my-setup" class="heading display-1">My Setup</h1>
+
+            <h2 class="font-tiltwarp display-4 color-accent">Hardware</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3">
+                <div class="col">
+                    <div class="default-box spec-box px-3 py-2 h-100">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-5">
+                                <img src="images/about/laptop.webp" style="max-width: 96px;">
+                            </div>
+                            <div class="col-7">
+                                <span class="h4 fw-bold">MacBook Air M4<span>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>16GB Unified Memory</li>
+                            <li>Main Portable Workstation</li>
+                            <li>Secondary Streaming Machine</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="default-box spec-box px-3 py-2 h-100">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-5">
+                                <img src="images/about/pc.webp" class="p-2" style="max-width: 96px;">
+                            </div>
+                            <div class="col-7">
+                                <span class="h4 fw-bold">Custom PC Build<span>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Intel Core i5-3570K</li>
+                            <li>16GB DDR3 RAM</li>
+                            <li>NVIDIA GeForce GTX 650</li>
+                            <li>Primary Streaming Machine</li>
+                        </ul>
+                    
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="default-box spec-box px-3 py-2 h-100">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-5">
+                                <img src="images/about/iphone.webp" class="p-2" style="max-width: 96px;">
+                            </div>
+                            <div class="col-7">
+                                <span class="h4 fw-bold">iPhone X<span style="font-size: 75%">R</span><span>
+                            </div>
+                        </div>
+                        <p>Main Facial Tracking Device (ARKit via VTube Studio)</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="default-box spec-box px-3 py-2 h-100">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-5">
+                                <img src="images/about/microphone.webp" class="p-2" style="max-width: 96px;">
+                            </div>
+                            <div class="col-7">
+                                <span class="h4 fw-bold">Maono DGM20<span>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Condenser Microphone</li>
+                            <li>Cardioid, ENC Noise Cancellation</li>
+                            <li>Wired USB</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="default-box spec-box px-3 py-2 h-100">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-5">
+                                <img src="images/about/capture-card.webp" class="p-2" style="max-width: 96px;">
+                            </div>
+                            <div class="col-7">
+                                <span class="h4 fw-bold">ACASIS VC-001<span>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Video Capture Card (HDMI)</li>
+                            <li>Effective 1080p/30fps</li>
+                            <li>USB 2.0/3.0</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <h2 class="font-tiltwarp color-accent display-4">Software</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3">
+                <div class="col">
+                    <div class="default-box spec-box px-3 py-2 h-100">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-5">
+                                <img src="https://raw.githubusercontent.com/emilianavt/VSeeFaceReleases/master/VSF.png" style="width: 72px; height: 72px; object-fit: scale-down;">
+                            </div>
+                            <div class="col-7">
+                                <span class="h4 fw-bold">VSeeFace<span>
+                            </div>
+                        </div>
+                        <p>VRoid Model Tracking (VRM) via VTube Studio (from iPhone)</p>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="default-box spec-box px-3 py-2 h-100">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-5">
+                                <img src="https://shared.fastly.steamstatic.com/community_assets/images/apps/1486350/7e8e6b042ba15dcd5238bda279d8c9c02ceb53ce.ico" style="width: 72px; height: 72px; object-fit: scale-down;">
+                            </div>
+                            <div class="col-7">
+                                <span class="h4 fw-bold">VRoid Studio<span>
+                            </div>
+                        </div>
+                        <p>VRoid 3D Modeling (VRM)</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="default-box spec-box px-3 py-2 h-100">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-5">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/archive/1/13/20180807124923%21OBS_Studio_logo.png" style="width: 72px; height: 72px; object-fit: scale-down;">
+                            </div>
+                            <div class="col-7">
+                                <span class="h4 fw-bold">OBS 32.1.2<span>
+                            </div>
+                            <p>Recording and Live Streaming</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="default-box spec-box px-3 py-2 h-100">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-5">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Kdenlive-logo.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" style="width: 72px; height: 72px; object-fit: scale-down;">
+                            </div>
+                            <div class="col-7">
+                                <span class="h4 fw-bold">Kdenlive<span>
+                            </div>
+                                <p>Non-Linear Video Editor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="default-box spec-box px-3 py-2 h-100">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-5">
+                                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Affinity_%28App%29_Logo.svg/250px-Affinity_%28App%29_Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" style="width: 64px; height: 64px; object-fit: scale-down;">
+                            </div>
+                            <div class="col-7">
+                                <span class="h4 fw-bold">Affinity<span>
+                            </div>
+                                <p class="pt-2">Graphic Designing and Branding</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <br>
+    </main>
+
+    <footer>
+        <div class="container-fluid py-4">
+            <div class="row px-2">
+                <div class="col">
+                    <span class="font-figtree color-white fw-bold fs-5">
+                        © 2026 Tubasas
+                    </span>
+                </div>
+                <div class="col d-flex justify-content-end">
+                    <div class="d-flex justify-content-center gap-4">
+                        <a href="https://www.youtube.com/@Tubasas"
+                        class="hero-social-link d-inline-flex align-items-center">
+                            <img src="images/youtube-social-icon-white.png"
+                                alt="YouTube"
+                                width="32">
+                        </a>
+
+                        <a href="https://bsky.app/profile/tubasas.bsky.social"
+                        class="hero-social-link d-inline-flex align-items-center">
+                            <img src="images/bluesky-social-icon-white.png"
+                                alt="Bluesky"
+                                width="32">
+                        </a>
+                        <a href="https://ko-fi.com/tubasas"
+                        class="hero-social-link d-inline-flex align-items-center">
+                            <img src="images/kofi-social-icon-white.png"
+                                alt="Ko-fi"
+                                width="32">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- CUSTOM JS -->
+    <script src="js/menu.js"></script>
+</body>
+</html>
