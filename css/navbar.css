@@ -42,3 +42,13 @@
 .font-mochiy {
     font-family: 'Mochiy Pop One';
 }
+
+#contactNavLink {
+    display: block;
+}
+
+@media (max-width: 840px) {
+    #contactNavLink {
+        display: none;
+    }
+}

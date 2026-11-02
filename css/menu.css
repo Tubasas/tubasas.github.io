@@ -4,6 +4,10 @@
     --shadow-color: #C3D8DB;
 }
 
+.japanese-subtext {
+    font-size: 0.85em;
+}
+
 /* Sticky Hamburger Menu Button (Top Right) */
 .hamburger-btn {
     position: fixed;
@@ -236,7 +240,7 @@ body.menu-open .menu-close-btn {
     border-color: var(--white);
     border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    box-shadow: 4px 4px 0 0 var(--social-shadow);   
+    box-shadow: 4px 4px 0 0 var(--social-shadow);
 }
 
 .social-link-youtube {
@@ -301,7 +305,7 @@ body.menu-open .menu-close-btn {
 }
 
 /* Responsive Adjustments relative to Bootstrap 5 breakpoints
-   https://getbootstrap.com/docs/5.3/layout/breakpoints/ 
+   https://getbootstrap.com/docs/5.3/layout/breakpoints/
 */
 
 
@@ -335,7 +339,7 @@ body.menu-open .menu-close-btn {
     .side-text {
         display: none;
     }
-    
+
     #menu-logo {
         display: block;
     }

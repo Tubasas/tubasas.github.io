@@ -26,19 +26,19 @@
 </head>
 <body>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg background-color-primary">
+    <nav class="navbar navbar-expand-md background-color-primary">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">
             <img id="navbar-logo" src="images/navbar-logo.png" alt="Tubasas" width="180">
             <canvas id="navbar-canvas" width="180" height="45"></canvas>
         </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2">
+        <ul class="navbar-nav me-auto mb-lg-0 gap-2">
             <li class="nav-item">
                 <a class="nav-link active" href="/">
                     <div class="navbar-link-stack text-center text-white fs-5">
                         <span class="font-primary fw-bold text-uppercase">Home</span>
-                        <span class="font-mochiy">ホーム</span>
+                        <span class="japanese-subtext font-mochiy">ホーム</span>
                     </div>
                 </a>
             </li>
@@ -46,7 +46,7 @@
                 <a class="nav-link" aria-current="page" href="#">
                     <div class="navbar-link-stack text-center text-white fs-5">
                         <span class="font-primary fw-bold text-uppercase">About</span>
-                        <span class="font-mochiy">アバウト</span>
+                        <span class="japanese-subtext font-mochiy">アバウト</span>
                     </div>
                 </a>
             </li>
@@ -54,7 +54,7 @@
                 <a class="nav-link" href="schedule">
                     <div class="navbar-link-stack text-center text-white fs-5">
                         <span class="font-primary fw-bold text-uppercase">Schedule</span>
-                        <span class="font-mochiy">スケジュール</span>
+                        <span class="japanese-subtext font-mochiy">スケジュール</span>
                     </div>
                 </a>
             </li>
@@ -62,15 +62,15 @@
                 <a class="nav-link" href="gallery">
                     <div class="navbar-link-stack text-center text-white fs-5">
                         <span class="font-primary fw-bold text-uppercase">Gallery</span>
-                        <span class="font-mochiy">写真</span>
+                        <span class="japanese-subtext font-mochiy">写真</span>
                     </div>
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" id="contactNavLink">
                 <a class="nav-link" href="/#contact">
                     <div class="navbar-link-stack text-center text-white fs-5">
                         <span class="font-primary fw-bold text-uppercase">Contact</span>
-                        <span class="font-mochiy">お問い合わせ</span>
+                        <span class="japanese-subtext font-mochiy">お問い合わせ</span>
                     </div>
                 </a>
             </li>
@@ -92,17 +92,17 @@
         </button>
     </div>
     </nav>
-    
+
     <!-- HAMBURGER MENU / SIDE MENU -->
     <!-- <div id="sideMenuBackdrop" class="side-menu-backdrop" aria-hidden="true"></div>-->
     <aside id="sideMenu" class="side-menu" aria-label="Site Navigation" aria-hidden="true">
         <!-- MENU HEADER -->
         <div class="menu-header">
-            <!-- Title header swithces from MENU to the logo on mobile -->
+            <!-- Title header switches from MENU to the logo on mobile -->
             <div class="menu-title">
                 <div class="side-text font-figtree">MENU</div>
                 <div class="mobile-logo">
-                    <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="/">
+                    <a aria-current="page" href="/">
                         <img id="menu-logo" src="images/navbar-logo-white.png" alt="Tubasas">
                     </a>
                 </div>
@@ -121,25 +121,25 @@
                     <div class="col-6">
                         <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="/">
                             <span class="font-primary fw-bold text-uppercase">Home</span>
-                            <span class="font-mochiy">ホーム</span>
+                            <span class="japanese-subtext font-mochiy">ホーム</span>
                         </a>
                     </div>
                     <div class="col-6">
-                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" aria-current="page" href="#">
+                        <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="#">
                             <span class="font-primary fw-bold text-uppercase">About</span>
-                            <span class="font-mochiy">アバウト</span>
+                            <span class="japanese-subtext font-mochiy">アバウト</span>
                         </a>
                     </div>
                     <div class="col-6">
                         <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="/#videos">
                             <span class="font-primary fw-bold text-uppercase">Videos</span>
-                            <span class="font-mochiy">ビデオ</span>
+                            <span class="japanese-subtext font-mochiy">ビデオ</span>
                         </a>
                     </div>
                     <div class="col-6">
                         <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="/#contact">
                             <span class="font-primary fw-bold text-uppercase">Contact</span>
-                            <span class="font-mochiy">お問い合わせ</span>
+                            <span class="japanese-subtext font-mochiy">お問い合わせ</span>
                         </a>
                     </div>
                 </div>
@@ -154,25 +154,25 @@
                     <div class="col-6">
                         <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="schedule">
                             <span class="font-primary fw-bold text-uppercase">Schedule</span>
-                            <span class="font-mochiy">スケジュール</span>
+                            <span class="japanese-subtext font-mochiy">スケジュール</span>
                         </a>
                     </div>
                     <div class="col-6">
                         <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="gallery">
                             <span class="font-primary fw-bold text-uppercase">Gallery</span>
-                            <span class="font-mochiy">写真</span>
+                            <span class="japanese-subtext font-mochiy">写真</span>
                         </a>
                     </div>
                     <div class="col-6">
                         <a class="sidebar-link-stack sidebar-link p-2 fs-5 disabled" aria-disabled="true">
                             <span class="font-primary fw-bold text-uppercase">Resources</span>
-                            <span class="font-mochiy">リソース</span>
+                            <span class="japanese-subtext font-mochiy">リソース</span>
                         </a>
                     </div>
                     <div class="col-6">
                         <a class="sidebar-link-stack sidebar-link p-2 fs-5" href="https://tubasas.carrd.co/">
                             <span class="font-primary fw-bold text-uppercase">Carrd.Co</span>
-                            <span class="font-mochiy">カルド</span>
+                            <span class="japanese-subtext font-mochiy">カルド</span>
                         </a>
                     </div>
                 </div>
@@ -258,7 +258,7 @@
                     </div>
                     <h2 class="font-tiltwarp text-center pt-0 pt-md-4 pt-lg-5">VTuber / Content Creator / Digital Artist</h2>
                     <div class="fw-semibold px-0 px-lg-5 pt-3" style="font-size: 1.1rem">
-                        <div class="px-lg-5">                            
+                        <div class="px-lg-5">
                             <p>I’m Tubasas, your resident tech VTuber from the Philippines! I mainly specialize in IT Support and enthusiastic in the rabbit hole of computer science. I primarily make videos and stream about this field especially teaching about it! I also aim to play and stream games in all sorts of wacky ways, even about computer science!</p>
                             <p>Aside from my nerdiness, I am also a graphic designer, writer, and an amateur UI designer! I work hard in having everything homemade from this website, my branding and graphics, to my future Live2D model soon.</p>
                             <p>I am fluent in English, Tagalog, and Cebuano (Bisaya).</p>
@@ -354,7 +354,7 @@
                             <li>NVIDIA GeForce GTX 650</li>
                             <li>Primary Streaming Machine</li>
                         </ul>
-                    
+
                     </div>
                 </div>
 
