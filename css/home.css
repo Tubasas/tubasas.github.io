@@ -13,7 +13,6 @@
 
 #tubasasCarousel div div img {
     max-height: 780px;
-    width: auto;
     object-fit: contain;
 }
 
@@ -28,7 +27,7 @@
 .heading {
     font-family: 'Figtree', sans-serif;
     font-weight: 800;
-    color: var(--primary-color);                          
+    color: var(--primary-color);
 }
 
 
@@ -84,11 +83,20 @@
 }
 
 @media (max-width: 767px) {
+
+    .greeting img {
+        display: block;
+        width: min(80%, 20rem);
+        height: auto;
+        margin-inline: auto;
+    }
+
     #tubasasCarousel div div img {
-        max-height: 512px;
+        max-width: 220px;
+        margin: 0 auto;
     }
 }
-
+/*
 @media (max-width: 575px) {
     #aboutModel {
         height: auto !important;
@@ -101,6 +109,7 @@
         max-height: 480px;
     }
 }
+*/
 
 footer {
     z-index: 1;
