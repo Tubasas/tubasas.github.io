@@ -206,7 +206,8 @@ body.menu-open .menu-close-btn {
     transition: background-color 0.3s ease
 }
 
-.sidebar-link:hover {
+.sidebar-link:hover,
+.sidebar-link:focus-visible {
     background-color: rgba(255, 255, 255, 0.205);
 }
 
@@ -271,7 +272,8 @@ body.menu-open .menu-close-btn {
 }
 
 
-.social-link:hover {
+.social-link:hover,
+.social-link:focus-visible {
     background-color: var(--highlight-color);
     transform: translate(-2px, -2px);
     box-shadow: 6px 6px 0 0 var(--social-shadow);
